@@ -109,7 +109,7 @@ sp.spatial.distance.jaccard(x, y)
 # the data so that each feature becomes uncorrelated with all other
 # features and all transformed features have the same amount of variance,
 # which eliminates the scaling issues present in Euclidean distance.
-data = np.genfromtxt('Jedi.data', delimiter=',', usecols=range(4))
+data = np.genfromtxt('jedi.data', delimiter=',', usecols=range(4))
 
 # What is the first element in the covariance matrix?
 covariance_matrix = np.cov(data.T)[0][0]
@@ -120,7 +120,7 @@ inverse_cov_matrix = np.linalg.inv(np.cov(data.T))
 
 # Compute the Mahalanobis distance between the first and second Jedi
 # in the data matrix. Round your answer to four decimal places.
-data = np.genfromtxt('Jedi.data', delimiter=',', usecols=range(4))
+data = np.genfromtxt('jedi.data', delimiter=',', usecols=range(4))
 invCov = np.linalg.inv(np.cov(data, rowvar=0))
 x = data[0]
 y = data[1]
